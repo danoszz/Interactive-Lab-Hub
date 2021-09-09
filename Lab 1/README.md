@@ -2,9 +2,17 @@
 
 In the original stage production of Peter Pan, Tinker Bell was represented by a darting light created by a small handheld mirror off-stage, reflecting a little circle of light from a powerful lamp. Tinkerbell communicates her presence through this light to the other characters. See more info [here](https://en.wikipedia.org/wiki/Tinker_Bell).
 
-There is no actor that plays Tinkerbell--her existence in the play comes from the interactions that the other characters have with her.
 
-For lab this week, we draw on this and other inspirations from theatre to stage interactions with a device where the main mode of display/output for the interactive device you are designing is lighting. You will plot the interaction with a storyboard, and use your computer and a smartphone to experiment with what the interactions will look and feel like.
+## Report
+
+A brief overview of all deliverables and necessary information.
+## Deliverables
+
+1. [x] Storyboard
+2. [x] Sketches/photos of costumed device
+3. [] Any reflections you have on the process
+4. [] Video sketch of the prototyped interaction
+5. [] Submit the items above in the lab1 folder of your class [Github page]
 
 ## Prep
 
@@ -12,61 +20,6 @@ For lab this week, we draw on this and other inspirations from theatre to stage 
 - [x] Setup README.md
 - [x] Learn GIT
 - [x] Get tools (paper, scissors, smartphone, computer, materials)
-
-## Report
-
-A brief overview of all deliverables and necessary information.
-
-### Plan
-
-_Setting:_ The deserted desert where the Tinkerbelle device, disguisted as a bottle, communicates through Morse code for "Water"
-
-_Players:_ Two lonely travelers, seeking for water and the bottle hidden in the sand
-
-_Activity:_ The two travelers find a bright shining light among the burning heat of the sun. They decide if this is a Fata Morgana (Mirage) or actually true. One of the comrads finds out this is Tinkerbelle signalling for "Water"
-
-_Goals:_ When the travellers find the bottle, they are not sure if it is real. So the Tinkerbelle device switches from the Morse sequence of "Water" to a more humane signal to indicates it understands the two travellers. Later it switch backs.
-
-### Storyboard
-
-Quick sketch of the planned story and interactions between Tinkerbelle and the actors
-
-![Storyboard V0.1](storyboard_V0.1.jpg)
-
-## Deliverables
-
-1. [x] Storyboard
-2. [] Sketches/photos of costumed device
-3. [] Any reflections you have on the process
-4. [] Video sketch of the prototyped interaction
-5. [] Submit the items above in the lab1 folder of your class [Github page]
-
----
-
-## Prep
-
-### To start the semester, you will need:
-
-1. Set up your own Github "Lab Hub" repository to keep all you work in record by [following these instructions](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2021Fall/readings/Submitting%20Labs.md).
-2. Set up the README.md for your Hub repository (for instance, so that it has your name and points to your own Lab 1) and [learn how to](https://guides.github.com/features/mastering-markdown/) organize and post links to your submissions on your README.md so we can find them easily.
-3. (extra: Learn about what exactly Git is from [here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F).)
-
-### For this lab, you will need:
-
-1. Paper
-2. Markers/ Pens
-3. Scissors
-4. Smart Phone -- The main required feature is that the phone needs to have a browser and display a webpage.
-5. Computer -- We will use your computer to host a webpage which also features controls.
-6. Found objects and materials -- You will have to costume your phone so that it looks like some other devices. These materials can include doll clothes, a paper lantern, a bottle, human clothes, a pillow case, etc. Be creative!
-
-### Deliverables for this lab are:
-
-1. Storyboard
-1. Sketches/photos of costumed device
-1. Any reflections you have on the process
-1. Video sketch of the prototyped interaction
-1. Submit the items above in the lab1 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same from each person in the group.
 
 ### The Report
 
@@ -92,75 +45,80 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. Plan
 
-To stage the interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge).
-
-The interactive device can be anything _except_ a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
-
 \*\***Describe your setting, players, activity and goals here.**\*\*
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene.
+_Setting:_ The deserted desert during the night where the Tinkerbelle device, disguisted as a bottle, communicates through Morse code for "Water"
+
+_Players:_ Two lonely travelers, seeking for water and the bottle hidden in the sand
+
+_Activity:_ The two travelers find a bright shining light among the burning heat of the sun. They decide if this is a Fata Morgana (Mirage) or actually true. One of the comrads finds out this is Tinkerbelle signalling for "Water"
+
+_Goals:_ When the travellers find the bottle, they are not sure if it is real. So the Tinkerbelle device switches from the Morse sequence of "Water" to a more humane signal to indicates it understands the two travellers. Later it switch backs.
+
+### Storyboard
+
 
 \*\***Include a picture of your storyboard here**\*\*
 
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
+![Storyboard V0.2](storyboard.jpg)
 
 \*\***Summarize feedback you got here.**\*\*
 
+### Feedback 
+
+* Think about chiming to make device human enough to catch attention
+* Present desert in the dark instead of during the day, visibility of item
+* How to point to the right direction? Utilize tilt sensor f.e
+
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it.
 
 \*\***Are there things that seemed better on paper than acted out?**\*\*
 
+1. The location: desert is not really feasible to reach for prototyping
+2. The time of day: with the sun out the light effect is less impressive
+
 \*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
 
+1. There should be more humanized interation (voice - sound - haptics)
 ## Part C. Prototype the device
-
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device.
 
 Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
 
-We invented this tool for this lab!
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
+
+1. Fullscreen only works on desktop
+2. Light patterns are tricky to implement
+3. Great sync!
 
 ## Part D. Wizard the device
 
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record.
 
-\*\***Include your first attempts at recording the set-up video here.**\*\*
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype.
-
-\*\***Show the follow-up work here.**\*\*
+![Device Sketch V0.1](product-sketch.jpg)
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
-
 \*\***Include sketches of what your device might look like here.**\*\*
+
+![Device Costume V0.1](product-costume.jpg)
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 
+1. Aluminium foil conducts touch, putting phone inside case creates interaction with the screen
+2. No use case visible through video
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design.
+![Prototyped Interaction](IMG_5802.mov)
 
+_Devices chimes user when close to water_
+## Reflection
+
+Heavy work in process, lacked creativity in the process towards the deliverable. Need to do better next time on quality of assets, documentation, collaboration and general inspiration. 
 # Staging Interaction, Part 2
 
 This describes the second week's work for this lab activity.
