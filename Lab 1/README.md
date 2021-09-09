@@ -113,7 +113,9 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-![Prototyped Interaction](IMG_5802.mov)
+[![Prototyped Interaction](http://img.youtube.com/vi/P7YwBlD_3rA/0.jpg)](https://youtu.be/P7YwBlD_3rA "Prototyped Interaction")
+
+
 
 _Devices chimes user when close to water_
 ## Reflection
