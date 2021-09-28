@@ -197,6 +197,16 @@ After that, Git will ask you to login to your GitHub account to push the updates
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+1. Interacting with controlers and images from examples
+2. Connect proximity sensor 
+3. Understand images, sizes, transparency and modifaction on screen
+4. Explore possiblity to animate multiple images based on users input
+5. Interpolate between two number ranges
+
+\*\*\***New video of your PiClock**\*\*\*
+
+[![Video of PiClock](http://img.youtube.com/vi/mkVVeppTrVk/0.jpg)](https://youtu.be/mkVVeppTrVk "Prototyped Interaction V2")
+
 
 # Prep for Part 2
 

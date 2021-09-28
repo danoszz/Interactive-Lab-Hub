@@ -1,10 +1,26 @@
+# Spark my fire (but not too close) - python + proximity sensor to give time when you can keep balance
+
 import time
 import subprocess
 import digitalio
 import board
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import adafruit_rgb_display.st7789 as st7789
+import board
+import busio
+import adafruit_apds9960.apds9960
+import time
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
+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
+# credits to promiximty.py by the IDD team Fall 2021 in Lab 2 repo
+# set sensor to right board port
+
+i2c = busio.I2C(board.SCL, board.SDA)
+sensor = adafruit_apds9960.apds9960.APDS9960(i2c)
+
+# enable sensor
+sensor.enable_proximity = True
+	
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
 dc_pin = digitalio.DigitalInOut(board.D25)
@@ -40,58 +56,78 @@ rotation = 90
 # Get drawing object to draw on image.
 draw = ImageDraw.Draw(image)
 
-# Draw a black filled box to clear the image.
-draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
+# get image from file
+image = Image.open("candle_l.jpg")
 
-image = Image.open("candle-3.jpg")
+# Switch on backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
-# Display image.
-disp.image(image)
-
-
-# Draw a black filled box to clear the image.
-draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-
-#Draw some shapes.
-# First define some constants to allow easy resizing of shapes.
-padding = -2
-top = padding
-bottom = height - padding
-# Move left to right keeping track of the current x position for drawing shapes.
-x = 0
-
+# Draw a white filled box to clear the image.
+draw.rectangle((0, 0, width, height), outline=0, fill=(255, 255, 255))
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
+
+# Define buttons inputs
 buttonA = digitalio.DigitalInOut(board.D23)
 buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
+
+# Function to map one value range to the other (interpolate)
+# source https://stackoverflow.com/questions/1969240/mapping-a-range-of-values-to-another
+# edited to accept integers only
+
+def interpolate(value, leftMin, leftMax, rightMin, rightMax):
+    # Figure out how 'wide' each range is
+    leftSpan = leftMax - leftMin
+    rightSpan = rightMax - rightMin
+
+    # Convert the left range into a 0-1 range (float)
+    valueScaled = int(value - leftMin) / int(leftSpan)
+
+    # Convert the 0-1 range into a value in the right range.
+    return rightMin + (valueScaled * rightSpan)
+
+
+# function to resize image of candle based on dynamic value
 def resizeCandle(img, h):
     
-    counter = 0;
+    #counter = 0;
     # clear image
-    draw.rectangle((0, 0, 240, 135), outline=0, fill=120)
+    #draw.rectangle((0, 0, 240, 135), outline=0, fill=120)
     
     #img = img.copy()
     #img.paste(img, (0, h // 2))
     
-   # img = img.transform(img.size, Image.EXTENT, (0, h, 0, 0))
+
+    draw.rectangle((0, 0, width, height), fill=(255 - h, 0, 0), outline=0) # draw darking red background
+    draw.rectangle((0, 0, width, h), fill=(h, h, h), outline=0) # draw rectangle
+
     img = img.resize((width, h))
     
-   # img = img.crop((10, 20, 20, 20))
-    #img.filter(ImageFilter.MinFilter)
     disp.image(img)
 
+# Start loop
 while True:
-    if buttonB.value and not buttonA.value:  # just button A pressed
-        resizeCandle(image, 240)
-    if buttonA.value and not buttonB.value:
-        resizeCandle(image, 80)
+    prox = sensor.proximity # get proximity
+    interProx = interpolate(prox, 0, 255, 1, 240) # set range initial sensor be in image dimensions
+    
+    if interProx > 210: # if high flame
+        image = Image.open("candle_h.jpg")
+        resizeCandle(image, int(interProx)) # convert float to int and pass to resize function
+    else:
+        image = Image.open("candle_l.jpg")
+        resizeCandle(image, int(interProx)) # convert float to int and pass to resize function
+
+
+    
+    print(int(interProx))
+
+        
     time.sleep(0.1)
