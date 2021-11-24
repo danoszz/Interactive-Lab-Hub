@@ -102,26 +102,42 @@ pi@ixe00:~/Interactive-Lab-Hub/Lab 3 $ python server.py
 ```
 From a remote browser on the same network, check to make sure your webserver is working by going to `http://<YourPiIPAddress>:5000`. You should be able to see "Hello World" on the webpage.
 
+![Screenshot Server](screenshot-server.png)
+
 ### Storyboard
 
 Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.) 
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+![Storyboard Verplank](storyboard-verplank.jpeg)
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 \*\***Please describe and document your process.**\*\*
 
+1. 🙋‍♂️: Morning bot, can I wear shorts today?
+2. 🔮: Goodmorning {{firstName}}, let me check the weather for you ...
+3. 🔮: Yes, today is going to be 20c ..
+4. 🙋‍♂️: Thanks bot, should I wear a jacket too?
+5. 🔮: No, it will sunny without wind unil the end of the day ... 
+4. 🙋‍♂️: Sweet, have a good one - 
+
+> I based the converstational flow of the user interaction from the film Her and Amazon Alexa, Smart Mirror videos on Youtube.
 ### Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
 
+* The user asked for more information, about traffic
+* The user expected a question about their ways of travel
+* The bot could not reply to the above since it focussed on wearing shorts
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
 
 \*\***Describe if the dialogue seemed different than what you imagined, or when acted out, when it was wizarded, and how.**\*\*
+
 
 # Lab 3 Part 2
 
@@ -133,6 +149,12 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
 3. Make a new storyboard, diagram and/or script based on these reflections.
 
+
+![Storyboard Verplank](storyboard-verplank_iteration.jpeg)
+
+1. The flexibility of the system in answers and responses could be improved
+2. The delay between 'thinking' questions could be manually added
+
 ## Prototype your system
 
 The system should:
@@ -142,7 +164,11 @@ The system should:
 
 *Document how the system works*
 
+The system passively await audio input → if the user speaks, it will process the data → based on this data, the system will perform an action → the core action in our scenario is asking if the user can wear shorts or long pants → the system checks the local weather forcasts → based if the weather is good or not → the system replies with a yes or no → the user decides to wear long or short pants that day
+
 *Include videos or screencaptures of both the system and the controller.*
+
+![Setup](setup.jpeg)
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -152,16 +178,26 @@ Answer the following:
 ### What worked well about the system and what didn't?
 \*\**your answer here*\*\*
 
+
+* Good: the intial question and listening to the user
+* Bad: the later reactions based on users questions
 ### What worked well about the controller and what didn't?
 
 \*\**your answer here*\*\*
 
+* Good: quick response time
+* Bad: the inconsistent output
+
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
 \*\**your answer here*\*\*
+
+Self-learning part based on persons voice, interactions and questions.
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
 \*\**your answer here*\*\*
 
+
+Syncing to public API for confirmation or check in database if similiar events happenings.
