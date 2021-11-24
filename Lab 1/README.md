@@ -10,9 +10,9 @@ A brief overview of all deliverables and necessary information.
 
 1. [x] Storyboard
 2. [x] Sketches/photos of costumed device
-3. [] Any reflections you have on the process
-4. [] Video sketch of the prototyped interaction
-5. [] Submit the items above in the lab1 folder of your class [Github page]
+3. [X] Any reflections you have on the process
+4. [X] Video sketch of the prototyped interaction
+5. [X] Submit the items above in the lab1 folder of your class [Github page]
 
 ## Prep
 

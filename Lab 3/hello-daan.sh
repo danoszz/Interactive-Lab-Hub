@@ -1,3 +1,6 @@
-#!/bin/sh
+#https://elinux.org/RPi_Text_to_Speech_(Speech_Synthesis)
 
-echo "Whatsup Daan, how are you doing today?" | festival --tts
+#!/bin/bash
+say() { local IFS=+;/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=$*&tl=en"; }
+#say $*
+say "Whatsup Daan, how are you doing today?"
