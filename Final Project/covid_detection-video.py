@@ -33,8 +33,8 @@ else:
 
 
 # Load the model
-model = tensorflow.keras.models.load_model('keras_model.h5')
-# Load Labels:
+model = tensorflow.keras.models.load_model('/models/keras_model.h5')
+# Load Labels:ds
 labels=[]
 f = open("labels.txt", "r")
 for line in f.readlines():
