@@ -7,16 +7,16 @@ from helper_image import displayImage
 
 # 1. register hardware
 
-# 🙄 register: button 
-# 🙄 register: touch sensor
-# 🙄 register: screen
-# 🙄 register: microphone
-# 🙄 register: camera
+# register: button 
+# register: touch sensor
+# register: screen
+# register: microphone
+# register: camera
 
 # 2. load API and externals
 
-# 🙄 load: Teachable machines
-# 🙄 load: webserver 
+# load: Teachable machines
+# load: webserver 
 
 # 3. build interaction flow
 
@@ -119,6 +119,6 @@ def init():
     # else:
     #     activateSpeechText("Oops, something went wrong")
 
-# Fire everything up 🔥
+# Fire everything up (finally)
 
 init()
