@@ -11,7 +11,6 @@ import adafruit_apds9960.apds9960
 import time
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-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
 # credits to promiximty.py by the IDD team Fall 2021 in Lab 2 repo
 # set sensor to right board port
 
