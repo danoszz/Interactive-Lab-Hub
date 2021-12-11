@@ -11,7 +11,6 @@ from struct import pack, unpack
 # 1. import helper functions from other labs
 from helper_image import displayImage 
 from helper_screen import displayText 
-from helper_button import checkButton 
 
 # 1. register hardware
 
