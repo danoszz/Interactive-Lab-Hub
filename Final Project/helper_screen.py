@@ -56,7 +56,7 @@ def displayText(firstLine, secondLine):
     # Alternatively load a TTF font.  Make sure the .ttf font file is in the
     # same directory as the python script!
     # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-    font = ImageFont.truetype("/assets/basis_grotesque_regular.ttf", 18)
+    font = ImageFont.truetype("assets/basis_grotesque_regular.ttf", 18)
 
     # Turn on the backlight
     backlight = digitalio.DigitalInOut(board.D22)
@@ -65,7 +65,7 @@ def displayText(firstLine, secondLine):
 
     while True:
         # Draw a black filled box to clear the image.
-        draw.rectangle((0, 0, width, height), outline=0, fill=("C3C3C3"))
+        draw.rectangle((0, 0, width, height), outline=0, fill=("#C3C3C3"))
 
         # t = time.strftime("%m/%d/%Y %H:%M:%S")
         t= firstLine or "Fallback" 

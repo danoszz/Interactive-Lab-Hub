@@ -5,6 +5,7 @@ import time
 # 1. import helper functions from other labs
 from helper_image import displayImage 
 from helper_screen import displayText 
+from helper_button import checkButton 
 
 # 1. register hardware
 
@@ -104,13 +105,16 @@ def activateCheckFlow():
 
 def activatePassiveMode():
     # display Image
-    #displayImage("ui-splashscreen.jpg")
-    # activate
-    activateScreen("Click to start detector")
+    displayImage("ui-splashscreen.jpg")
+
+
 
 ##### Intial Functions: start of the device#####
 
 def init():
+    buttonStatus = checkButton()
+    print(buttonStatus)
+
     activatePassiveMode()
 
     # if(buttonPressedOnce):
@@ -118,7 +122,7 @@ def init():
     # elif(buttonNotPressed):
     #     activatePassiveMode()
     # else:
-    #     activateSpeechText("Oops, something went wrong")
+    #     activateScreen("Oops, something went wrong")
 
 # Fire everything up
 
