@@ -4,6 +4,7 @@ import time
 
 # 1. import helper functions from other labs
 from helper_image import displayImage 
+from helper_screen import displayText 
 
 # 1. register hardware
 
@@ -28,7 +29,7 @@ getInputTouchSensor = 255
 
 # helper function: activate screen and populate with text
 def activateScreen(message):
-        print(message)
+    displayText(message)
 
 # helper function: activate speech ability with text
 def activateSpeech(message):
@@ -103,9 +104,9 @@ def activateCheckFlow():
 
 def activatePassiveMode():
     # display Image
-    displayImage("ui-splashscreen.png")
+    #displayImage("ui-splashscreen.jpg")
     # activate
-    # activateScreen("Click to start detector")
+    activateScreen("Click to start detector")
 
 ##### Intial Functions: start of the device#####
 
