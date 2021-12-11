@@ -71,7 +71,7 @@ getInputTouchSensor = 255
 
 # helper function: activate screen and populate with text
 def activateScreen(message):
-    displayText(message)
+    displayText(message, "")
 
 # helper function: activate speech ability with text
 def activateSpeech(message):
@@ -110,6 +110,10 @@ def checkProb():
 
 # function flow: check temperature of user
 def activateCheckFlow():
+
+    # welcome message
+    activateSpeechText("I will help you!")
+
     # get first probability 
     probCovid = checkProb()
 
@@ -158,14 +162,12 @@ def init():
             # get the button status
             btn_status = read_register(device, STATUS)
         
-            print(f"AVAILIBLE: {(btn_status&AVAILIBLE != 0)} BEEN_CLICKED: {(btn_status&BEEN_CLICKED != 0)} IS_PRESSED: {(btn_status&IS_PRESSED != 0)}")
-            # if pressed light LED
+            # if pressed activate flow
             if (btn_status&IS_PRESSED) != 0:
-                activateScreen("Oops, something went wrong")
-            # otherwise turn it off
-            else:
-                activatePassiveMode()
-            # don't slam the i2c bus
+                # Welcome message
+                activateSpeechText("Welcome to the COVID-19 Detector")
+                time.sleep(1)
+                activateCheckFlow()
             time.sleep(0.1)
 
         except KeyboardInterrupt:
@@ -173,13 +175,6 @@ def init():
             write_register(device, STATUS, 0)
             break
 
-
-    # if(buttonPressedOnce):
-    #     activateCheckFlow()
-    # elif(buttonNotPressed):
-    #     activatePassiveMode()
-    # else:
-    #     activateScreen("Oops, something went wrong")
 
 # Fire everything up
 
