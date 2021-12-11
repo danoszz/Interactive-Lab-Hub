@@ -113,7 +113,7 @@ def checkProb():
 def activateCheckFlow():
 
     # welcome message
-    activateSpeechText("I will help you!")
+    activateScreen("I will help you!")
 
     # get first probability 
     probCovid = checkProb()
@@ -167,7 +167,7 @@ def init():
             # if pressed activate flow
             if (btn_status&IS_PRESSED) != 0:
                 # Welcome message
-                activateSpeechText("Welcome to the COVID-19 Detector")
+                activateScreen("Welcome to the COVID-19 Detector")
                 time.sleep(1)
                 activateCheckFlow()
             time.sleep(0.1)
