@@ -75,12 +75,13 @@ def activateScreen(message):
 
 # helper function: activate speech ability with text
 def activateSpeech(message):
-        print(message)
+    print(message)
 
 # helper function: activate speech and display text on screen
 def activateSpeechText(message):
     activateScreen(message)
     activateSpeech(message)
+    
 
 # helper function: mock temperature check
 
@@ -157,6 +158,7 @@ def activatePassiveMode():
 ##### Intial Functions: start of the device#####
 
 def init():
+    activatePassiveMode()
     while True:
         try:
             # get the button status

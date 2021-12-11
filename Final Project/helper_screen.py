@@ -75,3 +75,5 @@ def displayText(firstLine, secondLine):
         # Display image.
         disp.image(image, rotation)
         time.sleep(1)
+        return
+    
