@@ -41,7 +41,7 @@ def checkButton():
         try:
             # get the button status
             btn_status = read_register(device, STATUS)
-            print(f"AVAILIBLE: {(btn_status&AVAILIBLE != 0)} BEEN_CLICKED: {(btn_status&BEEN_CLICKED != 0)} IS_PRESSED: {(btn_status&IS_PRESSED != 0)}")
+            #print(f"AVAILIBLE: {(btn_status&AVAILIBLE != 0)} BEEN_CLICKED: {(btn_status&BEEN_CLICKED != 0)} IS_PRESSED: {(btn_status&IS_PRESSED != 0)}")
             # if pressed light LED
             if (btn_status&IS_PRESSED) !=0:
                 write_register(device, 0x19, 255)

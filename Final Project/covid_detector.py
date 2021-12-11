@@ -105,7 +105,7 @@ def activateCheckFlow():
 
 def activatePassiveMode():
     # display Image
-    displayImage("ui-splashscreen.jpg")
+    displayImage("assets/ui-splashscreen.jpg")
 
 
 
